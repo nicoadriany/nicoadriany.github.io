@@ -5,7 +5,7 @@
 	font-family: Roboto;
 }
 
-body, div, p, h1, h2, h3, h4 {
+body, div, p, h1, h2, h3, h4, ul, li {
 	padding: 0;
 	margin: 0;
 }
@@ -44,4 +44,32 @@ body {
 .landing-page .passion {
 	font-size: 2rem;
 	font-weight: 200;
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.landing-page .social {
+	list-style-type: none;
+	display: flex;
+	gap: 10px;
+}
+
+.landing-page .social a {
+	width: 45px;
+	height: 45px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 1.5rem;
+	text-decoration: none;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.landing-page .social a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
