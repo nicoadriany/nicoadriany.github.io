@@ -1,7 +1,4 @@
-@font-face {
-	font-family: Roboto;
-	src: url("../fonts/Roboto-Regular.ttf") format("truetype");
-}
+@import "../fonts/roboto/css/roboto.font.css";
 
 * {
 	box-sizing: border-box;
@@ -11,4 +8,40 @@
 body, div, p, h1, h2, h3, h4 {
 	padding: 0;
 	margin: 0;
+}
+
+body {
+	background: rgb(10, 10, 10, 0.3) url("../img/bg2.png");
+	background-blend-mode: darken;
+	color: white;
+	font-size: 100%;
+	background-size: cover;
+}
+
+.landing-page {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.landing-page .pic {
+	width: 200px;
+	height: 200px;
+	background-image: url("../img/nicoadriany.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	border: 6px solid white;
+}
+
+.landing-page h1 {
+	font-size: 3rem;
+}
+
+.landing-page .passion {
+	font-size: 2rem;
+	font-weight: 200;
 }
