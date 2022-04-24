@@ -19,6 +19,7 @@ body {
 	background-blend-mode: darken;
 	color: white;
 	background-size: cover;
+	background-position: center;
 	background-attachment: fixed;
 }
 
