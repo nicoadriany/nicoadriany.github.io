@@ -5,7 +5,7 @@ let passion = "Web Developer";
 let passionIndex = 0;
 let passionInterval = 110;
 
-$(document).ready(() => {
+$(() => {
 	$('.cursor').css('visibility', 'hidden');
 	setInterval(() => {
 		if (cursorVisibility) {
@@ -25,4 +25,12 @@ $(document).ready(() => {
 			$("#passion-cursor").remove();
 		}
 	}, passionInterval);
+
+	/* jquery smooth scroll */
+	$('a[href*="#"]').on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $($(this).attr('href')).offset().top
+		}, 500, 'swing');
+	});
 });
