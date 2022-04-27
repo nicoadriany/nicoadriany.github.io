@@ -117,7 +117,7 @@ body {
 }
 
 .subpage .title-area {
-	background-color: rgba(40, 40, 40, 0.9);
+	background-color: rgb(35, 37, 54, 0.9);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -169,17 +169,6 @@ body {
 		width: 175px;
 		height: 175px;
 	}
-}
-
-@media screen and (max-width: 576px) {
-	html {
-		font-size: 12px;
-	}
-
-	.landing-page .pic {
-		width: 150;
-		height: 150px;
-	}
 
 	.subpage {
 		width: 100%;
@@ -192,6 +181,17 @@ body {
 
 	.subpage .title-area {
 		flex-grow: 0;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	html {
+		font-size: 12px;
+	}
+
+	.landing-page .pic {
+		width: 150;
+		height: 150px;
 	}
 }
 
