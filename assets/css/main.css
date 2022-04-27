@@ -180,6 +180,19 @@ body {
 		width: 150;
 		height: 150px;
 	}
+
+	.subpage {
+		width: 100%;
+		height:auto;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		height: --webkit-fill-available;
+	}
+
+	.subpage .title-area {
+		flex-grow: 0;
+	}
 }
 
 /* animations */
