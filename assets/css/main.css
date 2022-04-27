@@ -17,7 +17,6 @@ body, div, p, h1, h2, h3, h4, ul, li {
 body {
 	background: rgb(10, 10, 10, 0.3) url("../img/bg2.png");
 	background-blend-mode: darken;
-	color: white;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -27,10 +26,29 @@ body {
 	width: 100%;
 	height: 100vh;
 	height: -webkit-fill-available;
+	color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+}
+
+.landing-page .scroll-icon {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.landing-page .scroll-icon i {
+	animation: shake-down 3s ease-in-out infinite;
 }
 
 .landing-page .pic {
@@ -62,7 +80,7 @@ body {
 	gap: 10px;
 }
 
-.landing-page .social a {
+.landing-page a {
 	width: 45px;
 	height: 45px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
@@ -76,8 +94,74 @@ body {
 	transition: background-color 0.1s ease-in-out;
 }
 
-.landing-page .social a:hover {
+.landing-page a:hover {
 	background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* subpages */
+
+.subpage {
+	width: 100%;
+	height: 100vh;
+	height: -webkit-fill-available;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.subpage .subpage-area {
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	padding: 30px;
+}
+
+.subpage .title-area {
+	background-color: rgba(40, 40, 40, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 200;
+}
+
+.subpage .title-area span {
+	border: 1px solid white;
+	padding: 20px;
+	border-radius: 5px;
+	font-size: 3em;
+}
+
+.subpage .content-area {
+	background-color: rgb(255, 255, 255);
+	color: black;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* subpage: legal notices */
+.legal p {
+	text-align: justify;
+}
+
+.legal p + h2 {
+	margin-top: 25px;
+}
+
+.legal p + h3 {
+	margin-top: 25px;
+}
+
+.legal h2 {
+	margin-bottom: 10px;
+}
+
+.legal h3 {
+	margin: 0 0 10px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -99,5 +183,25 @@ body {
 	.landing-page .pic {
 		width: 150;
 		height: 150px;
+	}
+}
+
+/* animations */
+
+@keyframes shake-down {
+	0% {
+		padding-top: 0;
+	}
+	5% {
+		padding-top: 5px;
+	}
+	10% {
+		padding-top: 0;
+	}
+	15% {
+		padding-top: 5px;
+	}
+	20% {
+		padding-top: 0;
 	}
 }
