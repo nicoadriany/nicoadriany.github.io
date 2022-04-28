@@ -25,7 +25,6 @@ body {
 .landing-page {
 	width: 100%;
 	height: 100vh;
-	height: --webkit-fill-available;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -103,7 +102,6 @@ body {
 .subpage {
 	width: 100%;
 	height: 100vh;
-	height: --webkit-fill-available;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -180,7 +178,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
-		height: --webkit-fill-available;
 	}
 
 	.subpage .title-area {
@@ -196,6 +193,19 @@ body {
 	.landing-page .pic {
 		width: 150px;
 		height: 150px;
+	}
+}
+
+/* TEST */
+@media not all and (min-resolution:.001dpcm) { 
+	@supports (-webkit-appearance:none) and (stroke-color:transparent) {
+		.landing-page {
+			height: -webkit-fill-available;
+		}
+
+		.subpage {
+			height: -webkit-fill-available;
+		}
 	}
 }
 
