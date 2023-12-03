@@ -1,9 +1,9 @@
 let cursorInterval = 500;
 let cursorVisibility = false;
 
-let passion = "Web Developer";
+let passion = "Software-Engineer";
 let passionIndex = 0;
-let passionInterval = 110;
+let passionInterval = 70;
 
 $(() => {
 	$('.cursor').css('visibility', 'hidden');
